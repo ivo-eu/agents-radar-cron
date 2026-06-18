@@ -10,9 +10,9 @@ name: Dispatch agents-radar daily digest
 
 on:
   schedule:
-    # [临时验证 2026-06-18 public 后] 16:50 北京 = 08:50 UTC,验证 public 仓 cron 能否自动触发。
+    # [临时验证 2026-06-18 public 后] 17:05 北京 = 09:05 UTC,验证 public 仓 cron 能否自动触发。
     # 验证通过后必须改回 "17 23 * * *"(= 次日 07:17 北京)。
-    - cron: "50 8 * * *"
+    - cron: "5 9 * * *"
   workflow_dispatch: {}
 
 jobs:
