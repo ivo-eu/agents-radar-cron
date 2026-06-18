@@ -10,9 +10,10 @@ name: Dispatch agents-radar daily digest
 
 on:
   schedule:
-    # [临时验证 2026-06-18 public 后] 17:05 北京 = 09:05 UTC,验证 public 仓 cron 能否自动触发。
-    # 验证通过后必须改回 "17 23 * * *"(= 次日 07:17 北京)。
-    - cron: "5 9 * * *"
+    # 每天 23:17 UTC = 次日 07:17 北京时间(与原日报设定一致)。
+    # 注意:GitHub scheduled workflow 不准点,整点高负载常延迟几十分钟、偶尔丢弃。
+    # 独立 public 仓 + 成熟 cron 的触发率显著高于 fork;但不要指望准点。
+    - cron: "17 23 * * *"
   workflow_dispatch: {}
 
 jobs:
